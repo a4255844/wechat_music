@@ -1,0 +1,75 @@
+/* pages/login/login.wxss */
+.loginContainer {
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: #f8f6fc;
+}
+.wrapper {
+  position: relative;
+  padding: 80rpx 50rpx 0; 
+}
+.left-top-sign {
+  z-index: 0;
+  font-size: 120rpx;
+  color: #fff;
+  position: absolute;
+  left: -16rpx;
+  top: 0;
+}
+.welcome {
+  position: relative;
+  z-index: 10;
+  font-size: 46rpx;
+  color: #555;
+}
+.inputContainer {
+  margin-top: 100rpx;
+}
+.inputContainer .inputItem {
+  height: 120rpx;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.inputItem .tit {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #606266;
+}
+.inputItem input {
+  height: 60rpx;
+  font-size: 30rpx;
+  color: #303133;
+}
+.confirm-btn {
+  margin-top: 70rpx;
+  width: 100% !important;
+  background: #d43c33;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.forget-section {
+  margin-top: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #4399fc;
+}
+.register-section {
+  width: 100%;
+  position: absolute;
+  bottom: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #606266;
+}
+.register-section text {
+  color: #4399fc;
+  margin-left: 10rpx;
+}

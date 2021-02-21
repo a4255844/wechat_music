@@ -1,0 +1,112 @@
+/* pages/songDetail/songDetail.wxss */
+.bg {
+    float: left;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+    filter:blur(10rpx);
+    width: 100%;
+    height: 100%;
+}
+.songDetail {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.author {
+  margin: 30rpx 0;
+  font-size: 50rpx;
+  color: #fff;
+}
+.circle {
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+}
+.needle {
+  position: relative;
+  transform-origin: 36rpx 10rpx;
+  transform: rotate(-20deg);
+  top: -40rpx;
+  left: 60rpx;
+  z-index: 99;
+  width: 192rpx;
+  height: 274rpx;
+  transition: transform 1s ;
+}
+.play {
+  transform: rotate(0);
+}
+
+.discContainer {
+  position: relative;
+  top: -180rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+.discAnimation {
+  animation: disc 4s linear infinite;
+}
+.discAnimationPause {
+  animation-play-state: paused;
+}
+/*
+  @keyframes name
+    1) from to
+      - 使用于简单的动画，只有起始帧和结束帧
+      - 北京 - 上海  直达
+    2) 百分比
+      - 多用于复杂的动画，动画不止两帧
+      - 北京 - 上海 ---> 北京 -- 天津 --- 深圳 --- 上海
+      - 0% - 100%, 可以任意拆分
+
+*/
+@keyframes  disc {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.discContainer .disc {
+  width: 100%;
+  height: 100%;
+}
+.discContainer .authorImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto ;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%; 
+}
+.barControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  display: flex;
+  width: 100%;
+  border-top: 1rpx solid #fff;
+}
+.barControl text {
+  font-size: 60rpx;
+  flex: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+}
+.barControl text.big {
+  font-size: 80rpx;
+}
