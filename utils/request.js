@@ -2,7 +2,7 @@ import config from './config.js'
 export default (url, data = {}, method = 'GET', header = {}) => {
   return new Promise((resolve, reject) => {
     wx.request({
-      url: config.baceUrl + url,
+      url: config.mobileHost + url,
       data,
       method,
       header,

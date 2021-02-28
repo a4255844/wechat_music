@@ -1,13 +1,37 @@
 {
   "pages": [
-    "pages/recommendSong/recommendSong",
+    "pages/index/index",
+    "pages/search/search",
     "pages/video/video",
     "pages/personal/personal",
-    "pages/index/index",
-    "pages/login/login",
-    "pages/songDetail/songDetail"
-    
+    "pages/login/login"
   ],
+  "subpackages": [
+    {
+      "root": "otherPackage",
+      "name": "other",
+      "pages": [
+        "pages/other/other"
+      ]
+    },
+    {
+      "root": "songPackage",
+      "pages": [
+        "pages/recommendSong/recommendSong",
+        "pages/songDetail/songDetail"
+      ],
+      "independent":true
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "songPackage",
+        "other"
+      ]
+    }
+  },
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTextStyle": "white",
@@ -40,5 +64,7 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "requiredBackgroundModes": ["audio"]
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }

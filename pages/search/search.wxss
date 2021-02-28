@@ -1,0 +1,120 @@
+/* pages/search/search.wxss */
+.search {
+  padding: 0 20rpx;
+}
+/* 头部搜索框 */
+.header {
+  margin-top: 20rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.header .enter {
+  width: 100rpx;
+  text-align: center;
+}
+.header .searchInput {
+  flex: 1;
+  display: flex;
+  background: rgba(237, 237, 237, 0.3);
+  border-radius: 30rpx;
+  padding:0 20rpx ;
+  position: relative;
+}
+.searchInput input {
+  width: 100%;
+  height: 100%;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+}
+.searchInput .cancel {
+  width: 50rpx;
+  text-align: center;
+}
+
+/* 历史记录 */
+.history {
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.historyTitle {
+  display: flex;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+  margin-bottom: 10rpx;
+  justify-content: space-between;
+}
+
+.historyItem {
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+  background: #ededed;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+}
+/* 热搜榜 */
+.hotSearch {
+  margin-top: 30rpx;
+}
+.hotSearch .hotSearchTitle {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #eee;
+}
+.hotList {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.hotList .hotItem {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hotItem .order {
+  padding: 0 10rpx;
+}
+.hotItem .iconImg {
+  width: 35rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+/* 搜索内容展示 */
+.searchContent {
+  margin-top: 20rpx;
+}
+.searchContent .contentTitle {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #d43c33;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #d43c33;
+  
+}
+.contentItem {
+  display: flex;
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #eee;
+}
+.left .searchText {
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  flex:1;
+}
+

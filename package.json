@@ -1,0 +1,13 @@
+{
+  "name": "cloue_music",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/a4255844/wechat_music.git",
+  "author": "YOUR NAME <YOU@EXAMPLE.COM>",
+  "license": "MIT",
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "lyric-parser": "^1.0.1",
+    "pubsub-js": "^1.9.3"
+  }
+}

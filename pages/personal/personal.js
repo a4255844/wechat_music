@@ -50,6 +50,9 @@ Page({
   },
   //跳转到登录页面
   handleGoLogin() {
+    if (this.data.profile.nickname) {
+      return
+    }
     wx.reLaunch({
       url: '/pages/login/login'
     })

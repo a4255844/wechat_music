@@ -19,6 +19,18 @@ Page({
    */
   onLoad: function (options) {
     //页面加载时,读取本地存储的cookies
+    //页面加载完毕,保存相关cookies到data
+    const cookie = wx.getStorageSync('cookies') && wx.getStorageSync('cookies').find(item => item.indexOf('MUSIC_U') !== -1)
+    if (!cookie) {
+      wx.redirectTo({
+        url: '/pages/login/login'
+      })
+    }
+    this.setData({
+      cookie
+    })
+    //请求 获取nav 视频标签列表 前14个
+    this.getVideoGroupList()
   },
   //获取nav 视频标签列表 前14个
   async getVideoGroupList() {
@@ -1530,18 +1542,17 @@ Page({
     })
 
   },
-
-  /** 
+  //跳转到搜索页面
+  handleToSearch() {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    })
+  },
+  /**  
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    //页面加载完毕,保存相关cookies到data
-    const cookie = wx.getStorageSync('cookies') && wx.getStorageSync('cookies').find(item => item.indexOf('MUSIC_U') !== -1)
-    this.setData({
-      cookie
-    })
-    //请求 获取nav 视频标签列表 前14个
-    this.getVideoGroupList()
+
   },
 
   /**

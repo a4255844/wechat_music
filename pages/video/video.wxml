@@ -3,7 +3,7 @@
   <!-- 头部搜索区域 -->
   <view class="header-search">
     <image src="/static/images/video/video.jpg"></image>
-    <view class="searchBox">搜索音乐</view>
+    <view class="searchBox" bindtap="handleToSearch">搜索音乐</view>
     <image src="/static/images/logo.png"></image>
   </view>
   <!-- nav导航栏 -->

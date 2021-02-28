@@ -1,0 +1,33 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="bg" style="background-image: url({{songDetail[0].al.picUrl}});">
+</view>
+
+<view class="songDetail">
+  <view class="author">{{songDetail[0].ar[0].name||'歌手'}}</view>
+  <view class="circle"></view>
+  <image class="needle {{isPlay && 'play'}}" src="/static/images/song/needle.png"></image>
+  <view class="discContainer {{ animation }}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="authorImg" src="{{songDetail[0].al.picUrl}}"></image>
+  </view>
+  <scroll-view class="lines" scroll-y scroll-into-view="{{'lrc' +currentLyricLineId}}" scroll-with-animation>
+    <view class="scrollItem {{currentLyricLineId === ( index - 2) && 'currentScrollTtem'}}" id="{{'lrc' + index}}"
+      wx:for="{{lyricLines}}" wx:key="index">{{item.txt}}</view>
+  </scroll-view>
+  <view class="progressControl" bindtap="handleWidth">
+    <text>{{currentTime}}</text>
+    <view class="barControl">
+      <view class="audio-currentTime-bar" style="width: {{audioCurrentTimeBarWidth}};">
+        <view class="audio-circle"></view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  <view class="musicControl">
+    <text class="iconfont {{ playMode[currentMode].icon }}" bindtap="handlePlayMode"></text>
+    <text class="iconfont iconshangyiqu" data-type="pre" bindtap="switchMusic"></text>
+    <text class="iconfont {{isPlay ? 'iconbofangzhong' :'iconicon-'}} big" bindtap="playMusic"></text>
+    <text class="iconfont iconxiayiqu" data-type="next" bindtap="switchMusic"></text>
+    <text class="iconfont icongedan"></text>
+  </view>
+</view>

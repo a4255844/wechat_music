@@ -1,4 +1,9 @@
 /* pages/songDetail/songDetail.wxss */
+@import '/static/iconfont/iconfont.wxss';
+
+page {
+  height: 100%;  
+}
 .bg {
     float: left;
     background-position:center;
@@ -18,7 +23,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .author {
-  margin: 30rpx 0;
+  margin: 10rpx 0;
   font-size: 50rpx;
   color: #fff;
 }
@@ -91,15 +96,72 @@
   height: 370rpx;
   border-radius: 50%; 
 }
-.barControl {
+/* 歌词滚动区域 */
+ .lines {
+   position: absolute;
+   bottom: 15%;
+   height: 20vh;
+   width: 80%;
+   overflow: hidden;
+   
+ }
+.scrollItem {
+   line-height: 60rpx;
+   text-align: center;
+   font-size: 26rpx;
+   color: rgb(235, 231, 231);
+   opacity: .5;
+ }
+.lines .currentScrollTtem {
+   color: #fff;
+   font-size: 30rpx; 
+   opacity: 1;
+ }
+.progressControl {
   position: absolute;
-  bottom: 40rpx;
+  bottom: 130rpx;
+  height: 80rpx;
+  width: 640rpx;
+  display: flex;
+  align-items: center;
+}
+.progressControl text {
+  color: #fff;
+}
+.progressControl .barControl {
+  flex: 1;
+  position: relative;
+  height: 4rpx;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0 10rpx;
+}
+.audio-currentTime-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4rpx;
+  background: red;
+}
+.audio-circle {
+  position: absolute;
+  width: 12rpx;
+  height: 12rpx;
+  right: -12rpx;
+  top: -4rpx;  
+  border-radius: 50%;
+  background: #fff;
+  
+}
+
+.musicControl {
+  position: absolute;
+  bottom: 0;
   left: 0;
   display: flex;
   width: 100%;
   border-top: 1rpx solid #fff;
 }
-.barControl text {
+.musicControl text {
   font-size: 60rpx;
   flex: 20%;
   height: 120rpx;
@@ -107,6 +169,6 @@
   text-align: center;
   color: #fff;
 }
-.barControl text.big {
+.musicControl text.big {
   font-size: 80rpx;
 }

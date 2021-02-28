@@ -1,4 +1,7 @@
 
+@import '/static/iconfont/iconfont.wxss';
+
+/* 独立分包不与全局共享资源 */
 /* 头部样式*/
 .header {
   position: relative;

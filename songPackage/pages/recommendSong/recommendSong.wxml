@@ -15,8 +15,9 @@
       <text class="right">多选</text>
     </view>
     <scroll-view class="listScroll" scroll-y>
-      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id">
-        <view class="item-left" id="{{item.id}}" bindtap="handleToDetail">
+      <view class="scrollItem" wx:for="{{recommendList}}" data-index="{{index}}" data-musicid="{{item.id}}" wx:key="id"
+        bindtap="handleToDetail">
+        <view class="item-left">
           <image src="{{item.album.picUrl}}"></image>
           <view class="musicInfo">
             <text>{{item.name}}</text>

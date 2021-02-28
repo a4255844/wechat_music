@@ -54,7 +54,24 @@ Page({
     // })
 
   },
-
+  handleToRecommendSong() {
+    //判断用户是否登录,如未登录,跳转到login页面
+    const profile = wx.getStorageSync('profile') && JSON.parse(wx.getStorageSync('profile'))
+    if (!profile.nickname) {
+      wx.navigateTo({
+        url: "/pages/login/login"
+      })
+    } else {
+      wx.navigateTo({
+        url: '/songPackage/pages/recommendSong/recommendSong'
+      })
+    }
+  },
+  handleToOther() {
+    wx.navigateTo({
+      url: "/otherPackage/pages/other/other"
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
